@@ -3,10 +3,8 @@ package ru.mirea.IKBO2519.ex2;
 public abstract class Shape {
     protected String color;
     protected boolean filled;
-    Shape(){
-
-    }
-    Shape(String color,boolean filled){
+    public Shape() {}
+    public Shape(String color,boolean filled){
         this.color = color;
         this.filled = filled;
     }
@@ -40,9 +38,10 @@ public abstract class Shape {
 
 class Circle extends Shape {
 protected double radius;
-    Circle(double radius) {
+    public Circle() {}
+    public Circle(double radius) {
         this.radius = radius;}
-    Circle(double radius,String color,boolean filled){
+    public Circle(double radius,String color,boolean filled){
         this.radius = radius;
         this.color = color;
         this.filled = filled;
@@ -79,16 +78,18 @@ protected double radius;
 class Rectangle extends Shape {
 protected double width;
 protected double length;
-    Rectangle(double width,double length){
+    public Rectangle() {}
+    public Rectangle(double width,double length){
         this.width = width;
         this.length = length;
     }
-    Rectangle(double width,double length,String color,boolean filled){
+    public Rectangle(double width,double length,String color,boolean filled){
         this.width = width;
         this.length = length;
         this.color = color;
         this.filled = filled;
     }
+
 
     public double getWidth() {
         return width;
@@ -129,10 +130,12 @@ protected double length;
 
 class Square extends Rectangle{
 protected double side;
-    Square(double side){
+    public Square() {}
+    public Square(double side){
+        super();
         this.side = side;
     }
-    Square(double side,String color,boolean filled){
+    public Square(double side,String color,boolean filled){
         this.side = side;
         this.color = color;
         this.filled = filled;
@@ -147,12 +150,12 @@ protected double side;
     }
 
     @Override
-    public void setWidth(double width) {
+    public void setWidth(double side) {
         super.setWidth(width);
     }
 
     @Override
-    public void setLength(double length) {
+    public void setLength(double side) {
         super.setLength(length);
     }
 
