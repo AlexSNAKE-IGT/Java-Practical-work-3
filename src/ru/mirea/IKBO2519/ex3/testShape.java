@@ -1,4 +1,4 @@
-package ru.mirea.IKBO2519.ex2;
+package ru.mirea.IKBO2519.ex3;
 
 public class testShape {
     public static void main(String[] args) {
